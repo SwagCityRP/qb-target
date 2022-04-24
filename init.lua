@@ -82,8 +82,20 @@ Config.TargetBones = {
 }
 
 Config.TargetModels = {
-
-}
+	["Pillbox Medical"] = {
+        models = {
+            "s_m_m_paramedic_01"
+        },
+        options = {
+            {
+                type = "client",
+                event = "Hospital:CheckIn",
+                icon = "fas fa-hospital",
+                label = "Get treated ($2000)",
+            }
+        },
+        distance = 2.5,
+    },}
 
 Config.GlobalPedOptions = {
 
@@ -98,11 +110,17 @@ Config.GlobalObjectOptions = {
 }
 
 Config.GlobalPlayerOptions = {
-
 }
 
 Config.Peds = {
-
+	{ --pillbox checkin
+		model = 's_m_m_paramedic_01',
+		coords = vector4(308.4446, -595.2831, 42.2784, 72.3216),
+		gender = 'male',
+		freeze = true,
+		invincible = true,
+		blockevents = true,
+	},	
 }
 
 -------------------------------------------------------------------------------
